@@ -51,6 +51,7 @@
     }
 }
 
+ 
 
   /* General styles */
 
@@ -623,7 +624,7 @@ i.fa-solid {
 }
 
 .project-inner:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 .project-top {

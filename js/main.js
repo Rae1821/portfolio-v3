@@ -3,6 +3,8 @@
 
 // Hamburger Icon to full page vertical nav - from Olivia West Website 
 
+
+
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 
@@ -16,3 +18,6 @@ navLinks.forEach(link => {
     });
 });
 
+
+ScrollReveal().reveal('.section__title--projects', { delay: 300 });
+ScrollReveal().reveal('.project__content', { delay: 500 });
