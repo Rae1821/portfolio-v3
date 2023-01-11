@@ -61,6 +61,7 @@
   body {
     margin: 0;
     padding: 0;
+    height: 100%;
   }
 
   body {
@@ -72,7 +73,7 @@
   }
 
   section {
-    padding: 5em 2em;
+    padding: 5em 0;
   }
 
   h1,
@@ -183,7 +184,9 @@ img {
     max-width: 100%;
 }
 
+/* ----------------------- */
 /** Navigation **/
+/* ---------------------- */
 
 .nav {
     position: fixed;
@@ -213,12 +216,13 @@ img {
 .nav__item a {
     color: inherit;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
+    font-size: 2.25rem;
     text-decoration: none;
 }
 
 .nav__list a:hover {
-    color: var(--clr-limegreen);
+    border-bottom: 5px double var(--clr-limegreen);
+    outline-offset: 5px;
 }
 
 .nav-toggle {
@@ -293,18 +297,25 @@ img {
 .hamburger::before { top: 7px }
 .hamburger::after { bottom: 7px }
  
-
-/** Header **/
+/* ------------------- */
+/***** Header *****/
+/* ------------------- */
 
 .header {
     position: relative;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
     url('../img/portfolio-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-align: center;
+}
+
+@media (max-width: 900px) {
+   .header {
+    background-attachment: scroll;
+   } 
 }
 
 .header__text-box {
@@ -372,8 +383,9 @@ a:-webkit-any-link {
     cursor: pointer;
 }
 
-
+/* ------------------------- */
 /** About Section **/
+/* ------------------------- */
 
 .about__content {
     display: flex;
@@ -480,17 +492,12 @@ a:-webkit-any-link {
     align-items: center;
 }
 
-.fa-github {
-    padding-left: 50px;
+.fa-github.featured-project-github {
+    margin-left: 10px;
 }
 
 .fa-github:hover {
     color: var(--clr-limegreen);
-}
-
-
-.project__image-box {
-    margin-bottom: 3rem;
 }
 
 @media(min-width: 901px) {
@@ -534,6 +541,20 @@ a:-webkit-any-link {
 
 .link__text span {
     padding-left: 1rem;
+    
+}
+
+.project__image-box {
+    margin-bottom: 3rem;
+}
+
+.project__image {
+    box-shadow: 0.25em 0.25em 0.75em rgba(5,89,2,.35),
+    0.125em 0.125em 0.25em rgba(5,89,2,.25);
+}
+
+.project__image-link:hover {
+    opacity: .6;
 }
 
 /* --------------------------------- */
@@ -541,21 +562,15 @@ a:-webkit-any-link {
 /* --------------------------------- */
 
 .additional-projects {
-    display: flex;
-    flex-direction: row;
-    -webkit-box-align: center;
-    align-items: center;
-    max-width: 1000px;
     margin: 0 auto;
 }
-
-@media(max-width: 900px) {
-    .additional-projects {
-        flex-direction: column;
-    }
+.additional-projects-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
-
+/* Individual project */
 .project-inner {
     box-shadow: 0.25em 0.25em 0.75em rgba(2, 89, 89, .4),
                 0.125em 0.125em 0.25em rgba(2, 89, 89, .4);
@@ -564,9 +579,9 @@ a:-webkit-any-link {
     justify-content: space-between;
     -webkit-box-align: center;
     flex-direction: column;
-    align-items: flex-start;
     position: relative;
-    height: 100%;
+    height: 450px;
+    width: 500px;
     padding: 2rem 1.75rem;
     border-radius: 4px;
     background-color: #022340;
@@ -574,6 +589,7 @@ a:-webkit-any-link {
     overflow: auto;
     margin: 50px auto;
 }
+
 
 .project-inner:hover {
     transform: scale(1.01);
@@ -599,11 +615,10 @@ a:-webkit-any-link {
     margin-right: -10px;
 }
 
-
 .project-title {
     margin: 0 0 10px;
     color: var(--clr-light);
-    font-size: 22px;
+    font-size: var(--fs-h3);
 }
 
 .project-description {
@@ -632,9 +647,22 @@ a:-webkit-any-link {
     line-height: 1.75;
 }
 
+i.fa-solid.fa-arrow-up-right-from-square {
+    margin-left: 15px;
+}
+
+i.fa-solid.fa-arrow-up-right-from-square:hover,
+i.fa-solid.fa-arrow-up-right-from-square:active,
+i.fa-brands.fa-github:hover,
+i.fa-brands.fa-github:active {
+    color: var(--clr-limegreen);
+    transform: scale(1.1);
+}
 
 
+/* ------------------------------ */
 /** Contact Section **/
+/* ----------------------------- */
 
 .contact {
     max-width: 700px;
@@ -642,13 +670,9 @@ a:-webkit-any-link {
 
 @media (min-width: 1200px) {
     .contact {
-        margin-left: 12rem;
-        
+        margin-left: 12rem; 
     }
-
-  
 }
-
 
 .contact__info {
     font-size: 1.125rem;
@@ -705,8 +729,9 @@ a:-webkit-any-link {
     margin: 0;
 }
 
-
+/* ---------------------------- */
 /* ----- Back To Top ----- */
+/* ---------------------------- */
 
 .back-to-top {
     position: fixed;
