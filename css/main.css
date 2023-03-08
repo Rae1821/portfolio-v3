@@ -296,7 +296,57 @@ img {
 
 .hamburger::before { top: 7px }
 .hamburger::after { bottom: 7px }
+
+.desktop-nav {
+    display: none;
+}
  
+@media (min-width: 900px) {
+
+    .nav-toggle,
+    .hamburger,
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: inline;
+        text-align: right;
+        padding-top: 1em;
+        padding-right: 1em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .desktop-nav a {
+        padding-right: .5em;
+        padding-left: .5em;
+        font-size: 1.2rem;
+    }
+
+    .desktop-nav-link:hover {
+        border-bottom: 3px double #09A603;
+        padding-bottom: 5px;
+    }
+
+    .desktop-nav-link-resume {
+        border: 2px solid #09A603;
+        padding: .25em;
+        border-radius: 20px;
+    }
+
+    .desktop-nav-link-resume:hover {
+        background-color: #09A603;
+    }
+
+
+   
+
+}
+
+
 /* ------------------- */
 /***** Header *****/
 /* ------------------- */
@@ -439,17 +489,17 @@ a:-webkit-any-link {
 }
 
 .project__item:not(:last-child) {
-    margin-bottom: 15rem;
+    margin-bottom: 6em;
 }
 
 @media(max-width: 500px) {
     .project__item:not(:last-child) {
-        margin-bottom: 10rem;
+        margin-bottom: 5em;
     }
 }
 
 .project__text {
-    flex: 0 0 30%; 
+    flex: 0 0 40%; 
 }
 
 .project__title {
@@ -472,6 +522,7 @@ a:-webkit-any-link {
 
 .project__description {
     font-size: 1.25rem;
+    margin-top: 1em;
 }
 
 .tech__list {
@@ -503,7 +554,11 @@ a:-webkit-any-link {
 @media(min-width: 901px) {
     .project__image-box {
         flex: 1;
-        margin: 0 0 0 10rem;
+        margin: 0 0 0 3rem;
+    }
+
+    .project__image {
+        margin: 0 auto;
     }
 }
 
@@ -546,11 +601,6 @@ a:-webkit-any-link {
 
 .project__image-box {
     margin-bottom: 3rem;
-}
-
-.project__image {
-    box-shadow: 0.25em 0.25em 0.75em rgba(5,89,2,.35),
-    0.125em 0.125em 0.25em rgba(5,89,2,.25);
 }
 
 .project__image-link:hover {
