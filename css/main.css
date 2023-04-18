@@ -9,6 +9,7 @@
     --clr-deep-blue:#022340;
    --clr-darkestblue: #011526;
     --clr-dark-blue: #012E40;
+    --clr-grey-blue: #135266;
     --clr-blue-green: #025959;
     --clr-teal: #02735E;
     --clr-green: #038C65;
@@ -44,8 +45,6 @@
         --fs-body: 1.125rem;
     }
 }
-
- 
 
   *,
   *::before,
@@ -458,6 +457,7 @@ a:-webkit-any-link {
 
 .about__photo-container {
     margin-bottom: 3rem;
+    box-shadow: 
 }
 
 @media (min-width: 901px) {
@@ -603,8 +603,8 @@ a:-webkit-any-link {
     margin-bottom: 3rem;
 }
 
-.project__image-link:hover {
-    opacity: .6;
+.project__image-box {
+
 }
 
 /* --------------------------------- */
