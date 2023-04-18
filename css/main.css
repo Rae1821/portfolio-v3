@@ -603,8 +603,8 @@ a:-webkit-any-link {
     margin-bottom: 3rem;
 }
 
-.project__image-link:hover {
-    opacity: .6;
+.project__image-box:hover {
+    transform: translateY(-5px);
 }
 
 /* --------------------------------- */
