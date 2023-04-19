@@ -339,10 +339,6 @@ img {
     .desktop-nav-link-resume:hover {
         background-color: #09A603;
     }
-
-
-   
-
 }
 
 
@@ -440,12 +436,11 @@ a:-webkit-any-link {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    
 }
 
 .about__text p {
     font-weight: var(--fw-light);
-    font-size: 1.5rem;
+    font-size: 1.125rem;
 }
 
 @media (max-width: 900px) {
@@ -457,7 +452,12 @@ a:-webkit-any-link {
 
 .about__photo-container {
     margin-bottom: 3rem;
-    box-shadow: 
+}
+
+.about__photo {
+    border-radius: 5px;
+    filter:brightness(80%);
+    box-shadow: 1px 1px 5px var(--clr-light);
 }
 
 @media (min-width: 901px) {
@@ -600,114 +600,67 @@ a:-webkit-any-link {
 }
 
 .project__image-box {
-    margin-bottom: 3rem;
-}
-
-.project__image-box {
-
-}
-
-/* --------------------------------- */
-/** Additional projects section **/
-/* --------------------------------- */
-
-.additional-projects {
-    margin: 0 auto;
-}
-.additional-projects-container {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-}
-
-/* Individual project */
-.project-inner {
-    box-shadow: 0.25em 0.25em 0.75em rgba(2, 89, 89, .4),
-                0.125em 0.125em 0.25em rgba(2, 89, 89, .4);
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    flex-direction: column;
-    position: relative;
-    height: 450px;
-    width: 500px;
-    padding: 2rem 1.75rem;
-    border-radius: 4px;
-    background-color: #022340;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    overflow: auto;
-    margin: 50px auto;
+    margin-bottom: 2em;
+    box-shadow: 1px 0px 20px var(--clr-limegreen);
 }
 
 
-.project-inner:hover {
-    transform: scale(1.01);
+
+@media (min-width: 768px) {
+    .project__image-box {
+        margin-bottom: 0;
+    }
 }
 
-.project-top {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    margin-bottom: 35px;
+.project__image {
+    border-radius: 5px; 
+    width: 100%;
+    height: auto;
+    filter: brightness(80%);
 }
 
-.folder {
-    color: var(--clr-limegreen);
+.project__image:hover {
+    filter: brightness(100%);
 }
 
-.project-top .project-links {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    margin-right: -10px;
-}
 
-.project-title {
-    margin: 0 0 10px;
-    color: var(--clr-light);
-    font-size: var(--fs-h3);
-}
+/* @media (min-width: 768px) {
 
-.project-description {
-    color: var(--clr-light);
-    font-size: 17px;
-}
+    .project__image-box {
+        margin-bottom: 3rem;
+        position: relative;
+        width: 100%;
+    }
 
-.project-tech-list {
-    display: flex;
-    align-items: flex-end;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    padding: 0px;
-    margin: 20px 0 0;
-    list-style: none;
-}
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: var(--clr-limegreen);
+    }
+    
 
-.project-tech-list li:not(:last-of-type){
-    margin-right: 15px;
-}
-
-.project-tech-list li {
-    font-weight: var(--fw-light);
-    font-size: 12px;
-    line-height: 1.75;
-}
-
-i.fa-solid.fa-arrow-up-right-from-square {
-    margin-left: 15px;
-}
-
-i.fa-solid.fa-arrow-up-right-from-square:hover,
-i.fa-solid.fa-arrow-up-right-from-square:active,
-i.fa-brands.fa-github:hover,
-i.fa-brands.fa-github:active {
-    color: var(--clr-limegreen);
-    transform: scale(1.1);
-}
+    .project__image-box:hover .overlay {
+        opacity: .4;
+    }
+    
+    .overlay__text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+} */
 
 
 /* ------------------------------ */
@@ -720,7 +673,7 @@ i.fa-brands.fa-github:active {
 
 @media (min-width: 1200px) {
     .contact {
-        margin-left: 12rem; 
+        margin-left: 7rem; 
     }
 }
 
