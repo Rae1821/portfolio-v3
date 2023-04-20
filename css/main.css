@@ -423,7 +423,6 @@ p {
 }
 
 
-
 a:-webkit-any-link {
     cursor: pointer;
 }
@@ -754,6 +753,10 @@ a:-webkit-any-link {
 
 .back-to-top__image {
     height: 60%;
+}
+
+.back-to-top:hover {
+    background-color: var(--clr-grey-blue);
 }
 
 @media(max-width: 900px) {
