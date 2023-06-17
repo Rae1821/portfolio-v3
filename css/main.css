@@ -624,6 +624,13 @@ a:-webkit-any-link {
     filter: brightness(100%);
 }
 
+.project-video {
+    filter:brightness(80%);
+}
+
+.project-video:hover {
+    filter:brightness(100%);
+}
 
 /* @media (min-width: 768px) {
 
